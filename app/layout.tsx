@@ -30,6 +30,12 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <head>
+        <style suppressHydrationWarning>{`
+netlify-badge, iframe[src*="netlify"] {
+  display: none !important;
+}
+`}</style>
+
         <link rel="manifest" href="/manifest.webmanifest" crossOrigin="use-credentials" />
         <meta name="theme-color" content="#f8f7f2" />
         <link rel="apple-touch-icon" href="/icon-192.png" />
