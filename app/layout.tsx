@@ -31,8 +31,18 @@ export default function RootLayout({
     <html lang="zh-CN">
       <head>
        <style suppressHydrationWarning>
-  {`netlify-badge, iframe[src*="netlify"] { display: none !important; }`}
-</style> 
+  {`
+    [class*="netlify"], [id*="netlify"], iframe[src*="netlify"],
+    .netlify-badge, #netlify-badge,
+    div[class*="badge"], div[id*="badge"] {
+      display: none !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      opacity: 0 !important;
+    }
+  `}
+</style>
+
 
   
 
